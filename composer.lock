@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d5b78d9b1b180b6f7ca1693ccae889da",
+    "content-hash": "d2ba7c066924b7052456724f2d88859d",
     "packages": [
         {
             "name": "appointer/swaggervel",
@@ -1211,6 +1211,53 @@
                 "templates"
             ],
             "time": "2019-05-16T03:20:43+00:00"
+        },
+        {
+            "name": "infyomlabs/generator-builder",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/InfyOmLabs/generator-builder.git",
+                "reference": "1e5e99f2f7e0dfe9a7eda480f345f4745ab47d6e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/InfyOmLabs/generator-builder/zipball/1e5e99f2f7e0dfe9a7eda480f345f4745ab47d6e",
+                "reference": "1e5e99f2f7e0dfe9a7eda480f345f4745ab47d6e",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.0",
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "InfyOm\\GeneratorBuilder\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mitul Golakiya",
+                    "email": "me@mitul.me"
+                }
+            ],
+            "description": "InfyOm Laravel Generator GUI Builder",
+            "keywords": [
+                "api",
+                "builder",
+                "crud",
+                "generator",
+                "gui",
+                "interface",
+                "laravel",
+                "view"
+            ],
+            "time": "2019-05-16T03:30:25+00:00"
         },
         {
             "name": "infyomlabs/laravel-generator",
@@ -6149,7 +6196,8 @@
         "appointer/swaggervel": 20,
         "infyomlabs/adminlte-templates": 20,
         "infyomlabs/laravel-generator": 20,
-        "infyomlabs/swagger-generator": 20
+        "infyomlabs/swagger-generator": 20,
+        "infyomlabs/generator-builder": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
