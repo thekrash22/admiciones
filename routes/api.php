@@ -16,3 +16,18 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::resource('personas', 'PersonasAPIController');
+
+Route::resource('padres', 'PadresAPIController');
+
+Route::resource('aspirantes', 'AspirantesAPIController');
+
+Route::resource('hermanos', 'HermanosAPIController');
+
+Route::resource('historia_academicas', 'HistoriaAcademicaAPIController');
+
+Route::resource('relacion_colegios', 'RelacionColegioAPIController');
+
+Route::resource('documentos', 'DocumentosAPIController');

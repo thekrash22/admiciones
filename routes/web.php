@@ -34,3 +34,17 @@ Route::post(
     'generator_builder/generate-from-file',
     '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@generateFromFile'
 );
+
+Route::resource('personas', 'PersonasController');
+
+Route::resource('padres', 'PadresController');
+
+Route::resource('aspirantes', 'AspirantesController');
+
+Route::resource('hermanos', 'HermanosController');
+
+Route::resource('historiaAcademicas', 'HistoriaAcademicaController');
+
+Route::resource('relacionColegios', 'RelacionColegioController');
+
+Route::resource('documentos', 'DocumentosController');
