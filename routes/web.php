@@ -48,3 +48,12 @@ Route::resource('historiaAcademicas', 'HistoriaAcademicaController');
 Route::resource('relacionColegios', 'RelacionColegioController');
 
 Route::resource('documentos', 'DocumentosController');
+
+Route::get('formulario/create','FormularioController@formulario')->name('formulario.create');
+Route::post('formulario','FormularioController@store')->name('formulario.store');
+
+/*
+    Route ---> resource(get,post,put,path,delete), por defecto toma las funciones
+        index,create,store,edit,update,destroy
+    Route ---> get(get) --> especificar la funcion.
+*/
