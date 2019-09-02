@@ -45,13 +45,13 @@
 
     <!-- Numero Documento Field -->
     <div class="form-group col-sm-6">
-        {!! Form::label('as_numero_documento', 'Numero Documento:') !!}
+        {!! Form::label('as_numero_documento', 'Número Documento:') !!}
         {!! Form::number('as_numero_documento', null, ['class' => 'form-control']) !!}
     </div>
 
     <!-- Lugar Expedicion Documento Field -->
     <div class="form-group col-sm-6">
-        {!! Form::label('lugar_expedicion_documento', 'Lugar Expedicion Documento:') !!}
+        {!! Form::label('lugar_expedicion_documento', 'Lugar Expedición Documento:') !!}
         {!! Form::text('as_lugar_expedicion_documento', null, ['class' => 'form-control']) !!}
     </div>
 
@@ -70,7 +70,7 @@
     </div>
     <!-- Direccion Field -->
     <div class="form-group col-sm-6">
-        {!! Form::label('as_direccion', 'Direccion:') !!}
+        {!! Form::label('as_direccion', 'Dirección:') !!}
         {!! Form::text('as_direccion', null, ['class' => 'form-control']) !!}
     </div>
     <!-- Barrio Field -->
@@ -80,12 +80,12 @@
     </div>
     <!-- Telefono Field -->
     <div class="form-group col-sm-6">
-        {!! Form::label('as_telefono', 'Telefono:') !!}
+        {!! Form::label('as_telefono', 'Teléfono:') !!}
         {!! Form::text('as_telefono', null, ['class' => 'form-control']) !!}
     </div>
     <!-- Municipio Field -->
     <div class="form-group col-sm-6">
-        {!! Form::label('as_municipio', 'Municipio Donde vive:') !!}
+        {!! Form::label('as_municipio', 'Municipio donde vive:') !!}
         {!! Form::text('as_municipio', null, ['class' => 'form-control']) !!}
     </div>
     <!-- Zona Field -->
@@ -103,7 +103,7 @@
     </div>
     <div class="form-group col-sm-12 hermanos">
             <div class="form-group col-sm-12">
-                {!! Form::label('hermanos', '¿Tiene Hermanos en la institucion?') !!}
+                {!! Form::label('hermanos', '¿Tiene Hermanos en la institución?') !!}
                 <label class="radio-inline">
                     {!! Form::radio('tieneh', "No", true, ['checked' => 'checked']) !!} No
                 </label>
@@ -113,7 +113,7 @@
             </div>
             <div class="datos-hermanos" style="display: none;">
                 <div class="col-sm-12">
-                    <h4>Datos Hermanos estudiando en la institucion</h4>
+                    <h4>Datos Hermanos estudiando en la Institución</h4>
                 </div>
                 <div class="formulario-hermano">
                     <div class="form-group col-sm-6">
@@ -145,7 +145,7 @@
     </div>
 
     <div class="col-sm-12">
-        <h4>II. Historia academica del aspirantes</h4>
+        <h4>II. Historia académica del aspirante</h4>
     </div>
     <div class="form-group col-sm-6">
         {!! Form::label('col', 'Colegio de procedencia actual:') !!}
@@ -171,7 +171,7 @@
             </div>
             <div class="">
                 <div class="col-sm-12">
-                    <h4>Relaciones a continuacion los colegios donde ha estudiado</h4>
+                    <h4>Relacione a continuación los colegios donde ha estudiado</h4>
                 </div>
                 <div class="formulario-colegio">
                     <div class="form-group col-sm-6">
@@ -236,17 +236,17 @@
             </div>
             <!-- cedula Field -->
             <div class="form-group col-sm-6">
-                {!! Form::label('Cedula', 'Cedula:') !!}
+                {!! Form::label('Cedula', 'Cédula:') !!}
                 {!! Form::text('pa_cedula', null, ['class' => 'form-control']) !!}
             </div>
             <!-- Expedicion Field -->
             <div class="form-group col-sm-6">
-                {!! Form::label('lugar_expedicion_documento', 'Lugar Expedicion Documento:') !!}
+                {!! Form::label('lugar_expedicion_documento', 'Lugar Expedición Documento:') !!}
                 {!! Form::text('pa_lugar_expedicion_documento', null, ['class' => 'form-control']) !!}
             </div>
             <!-- Dirreccion Field -->
             <div class="form-group col-sm-6">
-                {!! Form::label('pa_direccion', 'Direccion:') !!}
+                {!! Form::label('pa_direccion', 'Dirección:') !!}
                 {!! Form::text('pa_direccion', null, ['class' => 'form-control']) !!}
             </div>
             <!-- Barrio Field -->
@@ -256,7 +256,7 @@
             </div>
             <!-- Telefono Field -->
             <div class="form-group col-sm-6">
-                {!! Form::label('pa_telefono', 'Telefono:') !!}
+                {!! Form::label('pa_telefono', 'Teléfono:') !!}
                 {!! Form::text('pa_telefono', null, ['class' => 'form-control']) !!}
             </div>
             <!-- celular Field -->
@@ -271,8 +271,8 @@
             </div>
             <!-- Profecion  Field -->
             <div class="form-group col-sm-8">
-                {!! Form::label('pa_profecion', 'Profección:') !!}
-                {!! Form::text('pa_profecion', null, ['class' => 'form-control']) !!}
+                {!! Form::label('pa_profesion', 'Profesión:') !!}
+                {!! Form::text('pa_profesion', null, ['class' => 'form-control']) !!}
             </div>
             <!-- Empresa Field -->
             <div class="form-group col-sm-6">
@@ -281,12 +281,12 @@
             </div>
             <!-- Dirreccion Field -->
             <div class="form-group col-sm-6">
-                {!! Form::label('pa_emp_dirrecion', 'Dirreccion:') !!}
+                {!! Form::label('pa_emp_dirrecion', 'Dirección:') !!}
                 {!! Form::text('pa_emp_dirreccion', null, ['class' => 'form-control']) !!}
             </div>
             <!-- Telefono Field -->
             <div class="form-group col-sm-6">
-                {!! Form::label('pa_emp_telefono', 'Telefono:') !!}
+                {!! Form::label('pa_emp_telefono', 'Teléfono:') !!}
                 {!! Form::text('pa_emp_telefono', null, ['class' => 'form-control']) !!}
             </div>
     </div>
@@ -318,17 +318,17 @@
             </div>
             <!-- cedula Field -->
             <div class="form-group col-sm-6">
-                {!! Form::label('Cedula', 'Cedula:') !!}
+                {!! Form::label('Cedula', 'Cédula:') !!}
                 {!! Form::text('ma_cedula', null, ['class' => 'form-control']) !!}
             </div>
             <!-- Expedicion Field -->
             <div class="form-group col-sm-6">
-                {!! Form::label('lugar_expedicion_documento', 'Lugar Expedicion Documento:') !!}
+                {!! Form::label('lugar_expedicion_documento', 'Lugar Expedición Documento:') !!}
                 {!! Form::text('ma_lugar_expedicion_documento', null, ['class' => 'form-control']) !!}
             </div>
             <!-- Dirreccion Field -->
             <div class="form-group col-sm-6">
-                {!! Form::label('ma_direccion', 'Direccion:') !!}
+                {!! Form::label('ma_direccion', 'Dirección:') !!}
                 {!! Form::text('ma_direccion', null, ['class' => 'form-control']) !!}
             </div>
             <!-- Barrio Field -->
@@ -338,7 +338,7 @@
             </div>
             <!-- Telefono Field -->
             <div class="form-group col-sm-6">
-                {!! Form::label('ma_telefono', 'Telefono:') !!}
+                {!! Form::label('ma_telefono', 'Teléfono:') !!}
                 {!! Form::text('ma_telefono', null, ['class' => 'form-control']) !!}
             </div>
             <!-- celular Field -->
@@ -353,8 +353,8 @@
             </div>
             <!-- Profecion  Field -->
             <div class="form-group col-sm-8">
-                {!! Form::label('ma_profecion', 'Profección:') !!}
-                {!! Form::text('ma_profecion', null, ['class' => 'form-control']) !!}
+                {!! Form::label('ma_profesion', 'Profesión:') !!}
+                {!! Form::text('ma_profesion', null, ['class' => 'form-control']) !!}
             </div>
             <!-- Empresa Field -->
             <div class="form-group col-sm-6">
@@ -363,17 +363,17 @@
             </div>
             <!-- Dirreccion Field -->
             <div class="form-group col-sm-6">
-                {!! Form::label('ma_emp_dirrecion', 'Dirreccion:') !!}
+                {!! Form::label('ma_emp_dirrecion', 'Dirección:') !!}
                 {!! Form::text('ma_emp_dirreccion', null, ['class' => 'form-control']) !!}
             </div>
             <!-- Telefono Field -->
             <div class="form-group col-sm-6">
-                {!! Form::label('ma_emp_telefono', 'Telefono:') !!}
+                {!! Form::label('ma_emp_telefono', 'Teléfono:') !!}
                 {!! Form::text('ma_emp_telefono', null, ['class' => 'form-control']) !!}
             </div>
 </div>
     <div class="col-sm-12">
-        <h4>IV. En caso que la aspirante no viva con sus padres</h4>
+        <h4>IV. En caso que el aspirante no viva con sus padres</h4>
     </div>
     <div class="col-sm-12">
         <h4>Información del acudiente</h4>
@@ -403,17 +403,17 @@
             </div>
             <!-- cedula Field -->
             <div class="form-group col-sm-6">
-                {!! Form::label('Cedula', 'Cedula:') !!}
+                {!! Form::label('Cedula', 'Cédula:') !!}
                 {!! Form::text('ac_cedula', null, ['class' => 'form-control']) !!}
             </div>
             <!-- Expedicion Field -->
             <div class="form-group col-sm-6">
-                {!! Form::label('lugar_expedicion_documento', 'Lugar Expedicion Documento:') !!}
+                {!! Form::label('lugar_expedicion_documento', 'Lugar Expedición Documento:') !!}
                 {!! Form::text('ac_lugar_expedicion_documento', null, ['class' => 'form-control']) !!}
             </div>
             <!-- Dirreccion Field -->
             <div class="form-group col-sm-6">
-                {!! Form::label('ac_direccion', 'Direccion:') !!}
+                {!! Form::label('ac_direccion', 'Dirección:') !!}
                 {!! Form::text('ac_direccion', null, ['class' => 'form-control']) !!}
             </div>
             <!-- Barrio Field -->
@@ -423,7 +423,7 @@
             </div>
             <!-- Telefono Field -->
             <div class="form-group col-sm-6">
-                {!! Form::label('ac_telefono', 'Telefono:') !!}
+                {!! Form::label('ac_telefono', 'Teléfono:') !!}
                 {!! Form::text('ac_telefono', null, ['class' => 'form-control']) !!}
             </div>
             <!-- celular Field -->
@@ -436,10 +436,10 @@
                 {!! Form::label('ac_correo', 'Correo:') !!}
                 {!! Form::text('ac_correo', null, ['class' => 'form-control']) !!}
             </div>
-            <!-- Profecion  Field -->
-            <div class="form-group col-sm-8">
-                {!! Form::label('ac_profecion', 'Profección:') !!}
-                {!! Form::text('ac_profecion', null, ['class' => 'form-control']) !!}
+           <!-- Profecion  Field -->
+           <div class="form-group col-sm-8">
+                {!! Form::label('ac_profesion', 'Profesión:') !!}
+                {!! Form::text('ac_profesion', null, ['class' => 'form-control']) !!}
             </div>
             <!-- Empresa Field -->
             <div class="form-group col-sm-6">
@@ -448,12 +448,12 @@
             </div>
             <!-- Dirreccion Field -->
             <div class="form-group col-sm-6">
-                {!! Form::label('ac_emp_dirrecion', 'Dirreccion:') !!}
+                {!! Form::label('ac_emp_dirrecion', 'Dirección:') !!}
                 {!! Form::text('ac_emp_dirreccion', null, ['class' => 'form-control']) !!}
             </div>
             <!-- Telefono Field -->
             <div class="form-group col-sm-6">
-                {!! Form::label('ac_emp_telefono', 'Telefono:') !!}
+                {!! Form::label('ac_emp_telefono', 'Teléfono:') !!}
                 {!! Form::text('ac_emp_telefono', null, ['class' => 'form-control']) !!}
             </div>
 
@@ -461,12 +461,12 @@
              <h4>V. Responsable del pago de los costos educativos</h4>
             </div>
             <div class="form-group col-sm-6">
-                {!! Form::label('pago', 'Relacion con el aspirante:') !!}
+                {!! Form::label('pago', 'Relación con el aspirante:') !!}
                 {!! Form::select('pago_estrato', ['Ma' => 'madre', 'Pa' => 'Padre', 'Otr' => 'Otro'], null, ['placeholder' => 'Reponsable del Pago', 'class' => 'form-control']) !!}
             </div>
             <div class="form-group col-sm-6">
                 {!! Form::label('religio', 'Religión que profesa:') !!}
-                {!! Form::select('as_religio', ['ca' => 'Catolico', 'cr' => 'Cristiana', 'Otr' => 'Otro'], null, ['placeholder' => 'Religion', 'class' => 'form-control']) !!}
+                {!! Form::select('as_religio', ['ca' => 'Catolico', 'cr' => 'Cristiana', 'Otr' => 'Otro'], null, ['placeholder' => 'Religión', 'class' => 'form-control']) !!}
             </div>
             <div class="col-sm-12">
              <h4>VI. Observaciones</h4>
