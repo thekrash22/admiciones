@@ -17,7 +17,7 @@ class CreateHistoriaAcademicasTable extends Migration
             $table->increments('id');
             $table->integer('aspirantes_id')->unsigned();
             $table->string('colegio_procedencia');
-            $table->string('grados_repetidos');
+            $table->string('grados_repetidos')->nullable();
             $table->timestamps();
             $table->softDeletes();
             $table->foreign('aspirantes_id')->references('id')->on('aspirantes');

@@ -18,12 +18,12 @@ class CreatePadresTable extends Migration
             $table->integer('personas_id')->unsigned();
             $table->string('direccion');
             $table->string('barrio');
-            $table->integer('telefono');
-            $table->integer('celular');
+            $table->string('telefono');
+            $table->string('celular');
             $table->string('correo');
             $table->string('profesion');
             $table->string('nombre_empresa');
-            $table->integer('telefono_empresa');
+            $table->string('telefono_empresa');
             $table->string('direccion_empresa');
             $table->boolean('es_acudiente');
             $table->timestamps();

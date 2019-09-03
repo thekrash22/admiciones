@@ -29,7 +29,8 @@ class CreateAspirantesTable extends Migration
             $table->string('Foto');
             $table->string('reponsable');
             $table->string('religion');
-            $table->string('observacion');
+            $table->longText('observacion');
+            $table->timestamps();
             $table->softDeletes();
             $table->foreign('personas_id')->references('id')->on('personas');
         });

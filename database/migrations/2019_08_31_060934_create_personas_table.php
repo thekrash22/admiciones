@@ -19,11 +19,11 @@ class CreatePersonasTable extends Migration
             $table->string('segundo_nombre');
             $table->string('primer_apellido');
             $table->string('segundo_apellido');
-            $table->string('tipo_documento');
+            $table->string('tipo_documento')->nullable();
             $table->string('numero_documento');
-            $table->string('lugar_expedicion_documento');
-            $table->date('fecha_nacimiento');
-            $table->string('lugar_nacimiento');
+            $table->string('lugar_expedicion_documento')->nullable();
+            $table->date('fecha_nacimiento')->nullable();
+            $table->string('lugar_nacimiento')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

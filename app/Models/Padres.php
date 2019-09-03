@@ -34,6 +34,7 @@ class Padres extends Model
 
     public $fillable = [
         'personas_id',
+        'aspirantes_id',
         'direccion',
         'barrio',
         'telefono',

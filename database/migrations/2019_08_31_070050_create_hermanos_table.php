@@ -21,6 +21,7 @@ class CreateHermanosTable extends Migration
             $table->string('primer_apellido');
             $table->string('segundo_apellido');
             $table->string('grado');
+            $table->timestamps();
             $table->softDeletes();
             $table->foreign('aspirantes_id')->references('id')->on('aspirantes');
         });
