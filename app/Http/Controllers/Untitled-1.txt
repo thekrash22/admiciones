@@ -1,0 +1,15 @@
+$aspirante->personas_id = $request->;
+$aspirante->grado = $request->;
+$aspirante->numero_formulario = $request->;
+$aspirante->fecha_inscripcion = $request->;
+$aspirante->direccion = $request->;
+$aspirante->barrio = $request->;
+$aspirante->telefono = $request->;
+$aspirante->municipio = $request->;
+$aspirante->zona = $request->;
+$aspirante->estrato = $request->;
+$aspirante->eps = $request->;
+$aspirante->Foto = $request->;
+$aspirante->reponsable = $request->;
+$aspirante->religion = $request->;
+$aspirante->observacion = $request->;
