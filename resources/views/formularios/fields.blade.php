@@ -519,6 +519,9 @@
                 $('#agregar-colegio').click(function(){
                     $(wrapper_colegio).append(fieldColegio);
                 });
+                $('form').submit(function(){
+                    $(this).children('input[type=submit]').prop('disabled', true);
+                });
 
         });
 
