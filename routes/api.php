@@ -31,3 +31,5 @@ Route::resource('historia_academicas', 'HistoriaAcademicaAPIController');
 Route::resource('relacion_colegios', 'RelacionColegioAPIController');
 
 Route::resource('documentos', 'DocumentosAPIController');
+
+Route::resource('documentos_incripcions', 'DocumentosIncripcionAPIController');

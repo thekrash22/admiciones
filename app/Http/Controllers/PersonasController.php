@@ -10,6 +10,8 @@ use App\Repositories\PersonasRepository;
 use Flash;
 use App\Http\Controllers\AppBaseController;
 use Response;
+use Mail;
+
 
 class PersonasController extends AppBaseController
 {
@@ -147,5 +149,24 @@ class PersonasController extends AppBaseController
         Flash::success('Personas deleted successfully.');
 
         return redirect(route('personas.index'));
+    }
+    public function correo()
+    {
+        $to_name = 'Oswaldo Gonzalez';
+        $to_email = 'thekrash22@gmail.com';
+        $data = array('name'=>"Ogbonna Vitalis(sender_name)", "body" => "A test mail");
+        /*Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
+            $message->to($to_email, $to_name)
+            ->subject('Laravel Test Mail');
+            $message->from('formulario@institutolamilagrosa.com','Test Mail');
+        });*/
+        $user ='thekrash22@gmail.com';
+        Mail::send('emails.mail', $data, function ($message) use ($user){
+
+            $message->subject('Asunto del correo');
+
+            $message->to('thekrash22@gmail.com');
+
+        });
     }
 }

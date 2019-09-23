@@ -1,5 +1,9 @@
 @extends('layouts.public')
+<div class="clearfix"></div>
 
+        @include('flash::message')
+
+        <div class="clearfix"></div>
 @section('content')
     <section class="content-header centered">
         <h1 class="centered">

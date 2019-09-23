@@ -5,7 +5,7 @@
     <!-- Primer Nombre Field -->
     <div class="form-group col-sm-6">
         {!! Form::label('grado_ingresar', 'Grado al que desea ingresar:') !!}
-        {!! Form::text('grado_ingresar', null, ['class' => 'form-control']) !!}
+        {!! Form::text('grado_ingresar', null, ['class' => 'form-control', 'required']) !!}
     </div>
 
     <div class="form-group col-sm-6">
@@ -16,43 +16,43 @@
     <!-- Primer Nombre Field -->
     <div class="form-group col-sm-6">
         {!! Form::label('primer_nombre', 'Primer Nombre:') !!}
-        {!! Form::text('as_primer_nombre', null, ['class' => 'form-control']) !!}
+        {!! Form::text('as_primer_nombre', null, ['class' => 'form-control', 'required']) !!}
     </div>
 
     <!-- Segundo Nombre Field -->
     <div class="form-group col-sm-6">
         {!! Form::label('segundo_nombre', 'Segundo Nombre:') !!}
-        {!! Form::text('as_segundo_nombre', null, ['class' => 'form-control']) !!}
+        {!! Form::text('as_segundo_nombre', null, ['class' => 'form-control', 'required']) !!}
     </div>
 
     <!-- Primer Apellido Field -->
     <div class="form-group col-sm-6">
         {!! Form::label('primer_apellido', 'Primer Apellido:') !!}
-        {!! Form::text('as_primer_apellido', null, ['class' => 'form-control']) !!}
+        {!! Form::text('as_primer_apellido', null, ['class' => 'form-control', 'required']) !!}
     </div>
 
     <!-- Segundo Apellido Field -->
     <div class="form-group col-sm-6">
         {!! Form::label('segundo_apellido', 'Segundo Apellido:') !!}
-        {!! Form::text('as_segundo_apellido', null, ['class' => 'form-control']) !!}
+        {!! Form::text('as_segundo_apellido', null, ['class' => 'form-control', 'required']) !!}
     </div>
 
     <!-- Tipo Documento Field -->
     <div class="form-group col-sm-6">
         {!! Form::label('as_tipo_documento', 'Tipo Documento:') !!}
-        {!! Form::select('as_tipo_documento', ['RC' => 'Registro Civil', 'TI' => 'Tarjeta de identidad', 'CC' => 'Cedula Ciudadania', 'CE' => 'Cedula Extranjera', 'PAS' => 'Pasaporte'], null, ['placeholder' => 'Seleccione un tipo de documento', 'class' => 'form-control']) !!}
+        {!! Form::select('as_tipo_documento', ['RC' => 'Registro Civil', 'TI' => 'Tarjeta de identidad', 'CC' => 'Cedula Ciudadania', 'CE' => 'Cedula Extranjera', 'PAS' => 'Pasaporte'], null, ['placeholder' => 'Seleccione un tipo de documento', 'class' => 'form-control', 'required']) !!}
     </div>
 
     <!-- Numero Documento Field -->
     <div class="form-group col-sm-6">
         {!! Form::label('as_numero_documento', 'Número Documento:') !!}
-        {!! Form::number('as_numero_documento', null, ['class' => 'form-control']) !!}
+        {!! Form::number('as_numero_documento', null, ['class' => 'form-control', 'required']) !!}
     </div>
 
     <!-- Lugar Expedicion Documento Field -->
     <div class="form-group col-sm-6">
         {!! Form::label('lugar_expedicion_documento', 'Lugar Expedición Documento:') !!}
-        {!! Form::text('as_lugar_expedicion_documento', null, ['class' => 'form-control']) !!}
+        {!! Form::text('as_lugar_expedicion_documento', null, ['class' => 'form-control', 'required']) !!}
     </div>
 
     <!-- Fecha Nacimiento Field -->
@@ -66,40 +66,40 @@
     <!-- Lugar Nacimiento Field -->
     <div class="form-group col-sm-6">
         {!! Form::label('lugar_nacimiento', 'Lugar Nacimiento:') !!}
-        {!! Form::text('as_lugar_nacimiento', null, ['class' => 'form-control']) !!}
+        {!! Form::text('as_lugar_nacimiento', null, ['class' => 'form-control', 'required']) !!}
     </div>
     <!-- Direccion Field -->
     <div class="form-group col-sm-6">
         {!! Form::label('as_direccion', 'Dirección:') !!}
-        {!! Form::text('as_direccion', null, ['class' => 'form-control']) !!}
+        {!! Form::text('as_direccion', null, ['class' => 'form-control', 'required']) !!}
     </div>
     <!-- Barrio Field -->
     <div class="form-group col-sm-6">
         {!! Form::label('as_barrio', 'Barrio:') !!}
-        {!! Form::text('as_barrio', null, ['class' => 'form-control']) !!}
+        {!! Form::text('as_barrio', null, ['class' => 'form-control', 'required']) !!}
     </div>
     <!-- Telefono Field -->
     <div class="form-group col-sm-6">
         {!! Form::label('as_telefono', 'Teléfono:') !!}
-        {!! Form::text('as_telefono', null, ['class' => 'form-control']) !!}
+        {!! Form::text('as_telefono', null, ['class' => 'form-control', 'required']) !!}
     </div>
     <!-- Municipio Field -->
     <div class="form-group col-sm-6">
         {!! Form::label('as_municipio', 'Municipio donde vive:') !!}
-        {!! Form::text('as_municipio', null, ['class' => 'form-control']) !!}
+        {!! Form::text('as_municipio', null, ['class' => 'form-control', 'required']) !!}
     </div>
     <!-- Zona Field -->
     <div class="form-group col-sm-6">
         {!! Form::label('zona', 'Zona:') !!}
-        {!! Form::select('as_zona', ['Rural' => 'Rural', 'Urbana' => 'Urbana'], null, ['placeholder' => 'Seleccione Zona...', 'class' => 'form-control']) !!}
+        {!! Form::select('as_zona', ['Rural' => 'Rural', 'Urbana' => 'Urbana'], null, ['placeholder' => 'Seleccione Zona...', 'class' => 'form-control', 'required']) !!}
     </div>
     <div class="form-group col-sm-6">
         {!! Form::label('estrato', 'Estrato donde vive:') !!}
-        {!! Form::select('as_estrato', ['0' => '0', '1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5', '6' => '6'], null, ['placeholder' => 'Seleccione Estrato...', 'class' => 'form-control']) !!}
+        {!! Form::select('as_estrato', ['0' => '0', '1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5', '6' => '6'], null, ['placeholder' => 'Seleccione Estrato...', 'class' => 'form-control', 'required']) !!}
     </div>
     <div class="form-group col-sm-6">
         {!! Form::label('eps', 'EPS del Aspirante:') !!}
-        {!! Form::text('as_eps', null, ['class' => 'form-control']) !!}
+        {!! Form::text('as_eps', null, ['class' => 'form-control', 'required']) !!}
     </div>
     <div class="form-group col-sm-12 hermanos">
             <div class="form-group col-sm-12">
@@ -291,7 +291,7 @@
             </div>
     </div>
     <div class="col-sm-12">
-        <h4>Datos del madre</h4>
+        <h4>Datos de la madre</h4>
     </div>
              <!-- Primer Nombre Field -->
             <div class="form-group col-sm-6">
@@ -462,11 +462,11 @@
             </div>
             <div class="form-group col-sm-6">
                 {!! Form::label('pago', 'Relación con el aspirante:') !!}
-                {!! Form::select('pago_estrato', ['Ma' => 'madre', 'Pa' => 'Padre', 'Otr' => 'Otro'], null, ['placeholder' => 'Reponsable del Pago', 'class' => 'form-control']) !!}
+                {!! Form::select('pago_estrato', ['Ma' => 'madre', 'Pa' => 'Padre', 'Otr' => 'Otro'], null, ['placeholder' => 'Reponsable del Pago', 'class' => 'form-control', 'required']) !!}
             </div>
             <div class="form-group col-sm-6">
                 {!! Form::label('religio', 'Religión que profesa:') !!}
-                {!! Form::select('as_religio', ['ca' => 'Catolico', 'cr' => 'Cristiana', 'Otr' => 'Otro'], null, ['placeholder' => 'Religión', 'class' => 'form-control']) !!}
+                {!! Form::select('as_religio', ['ca' => 'Católico', 'cr' => 'Cristiano', 'Otr' => 'Otro'], null, ['placeholder' => 'Seleccione Religión ...', 'class' => 'form-control', 'required']) !!}
             </div>
             <div class="col-sm-12">
              <h4>VI. Observaciones</h4>
@@ -475,10 +475,15 @@
             <div class="form-group col-sm-12">
             {!! Form::textarea('Observaciones', null, ['class'=>'form-control']) !!}
             </div>
+            <div class="form-group col-md-6">
+                {!! Form::label('email', 'Email de contacto:') !!}
+                <p>Importante: a este Email se le enviara Información sobre el proceso de admisión</p>
+                {!! Form::text('email_contacto', null, ['class' => 'form-control', 'required']) !!}
+            </div>
 </div>
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
-    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
+    {!! Form::submit('Enviar', ['class' => 'btn btn-primary']) !!}
 
 </div>
 @section('scripts')

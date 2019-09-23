@@ -51,7 +51,8 @@ class Aspirantes extends Model
         'Foto',
         'reponsable',
         'religion',
-        'observacion'
+        'observacion',
+        'contacto'
     ];
 
     /**
@@ -86,6 +87,12 @@ class Aspirantes extends Model
     public static $rules = [
         
     ];
-
-    
+    public function persona()
+    {
+        return $this->belongsTo('App\Models\Personas','personas_id','id');
+    }
+    public function padres()
+    {
+        //return $this->belongsTo('App\Models\Padres','padres_id','id');
+    }
 }

@@ -26,3 +26,7 @@
     <a href="{!! route('documentos.index') !!}"><i class="fa fa-edit"></i><span>Documentos</span></a>
 </li>
 
+<li class="{{ Request::is('documentosIncripcions*') ? 'active' : '' }}">
+    <a href="{!! route('documentosIncripcions.index') !!}"><i class="fa fa-edit"></i><span>Documentos Incripcions</span></a>
+</li>
+

@@ -51,9 +51,16 @@ Route::resource('documentos', 'DocumentosController');
 
 Route::get('formulario/create','FormularioController@formulario')->name('formulario.create');
 Route::post('formulario','FormularioController@store')->name('formulario.store');
+Route::get('subir-documentos/{id}','FormularioController@documentos')->name('formulario.documentos');
+Route::get('subir/documentos-inscripcion/{id}','FormularioController@documentos_inscripcion')->name('formulario.documentosinscripcion');
+Route::post('subir/inscripcion','FormularioController@inscripcion')->name('formulario.inscripcion');
 
 /*
     Route ---> resource(get,post,put,path,delete), por defecto toma las funciones
         index,create,store,edit,update,destroy
     Route ---> get(get) --> especificar la funcion.
 */
+
+Route::resource('documentosIncripcions', 'DocumentosIncripcionController');
+Route::get('correo','PersonasController@correo');
+Route::get('pdf','FormularioController@pdf');
