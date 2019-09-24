@@ -23,7 +23,7 @@ class FormularioController extends Controller
     }
     public function store(Request $request)
     {
-    
+
         /*$pv = $request->pa_primer_nombre ? $request->pa_primer_nombre : 'Noname';
         dd($pv);*/
         //dd($request->col_grado[0]);
@@ -126,7 +126,7 @@ class FormularioController extends Controller
             $historia->colegio_procedencia = $request->has_col or 'Sin dato';
             $historia->grados_repetidos = $request->anios_reiniciados or '0';
         $historia->save();
-        
+
         if($request->has_col){
             $i=0;
             foreach($request->col_grado as $col_grado){
@@ -142,7 +142,7 @@ class FormularioController extends Controller
                 $i++;
             }
         }
-        
+
         if($request->tieneh == 'Si'){
             $i =0;
             foreach ($request->her_primer_nombre as $her_primer_nombre) {
@@ -220,5 +220,17 @@ class FormularioController extends Controller
         $data = ['dato1' => 'ejemplo'];
         $pdf = PDF::loadView('pdf.inscripcion', $data);
         return $pdf->download('inscripcion.pdf');
+    }
+    public function pdf_admision($id)
+    {
+        $aspirante = Aspirantes::find($id);
+        if($aspirante)
+        {
+            //dd($aspirante);
+            $data = ['1024'];
+            $pdf = PDF::loadView('pdf.inscripcion', compact('aspirante'));
+            return $pdf->download('inscripcion.pdf');
+        }
+
     }
 }

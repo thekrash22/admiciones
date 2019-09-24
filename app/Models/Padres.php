@@ -27,7 +27,7 @@ class Padres extends Model
     use SoftDeletes;
 
     public $table = 'padres';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -73,8 +73,24 @@ class Padres extends Model
      * @var array
      */
     public static $rules = [
-        
+
     ];
 
-    
+    /**
+     * @return bool
+     */
+    public function isEsAcudiente(): bool
+    {
+        return $this->es_acudiente;
+    }
+    public function personas()
+    {
+        return $this->belongsTo('App\Models\Personas','personas_id','id');
+    }
+    public function aspirantes()
+    {
+        return $this->belongsTo('App\Models\Aspirantes','aspirantes_id','id');
+    }
+
+
 }

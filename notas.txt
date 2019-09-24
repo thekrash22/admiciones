@@ -2,7 +2,7 @@ notas mayo
 
 
 no van
-eps 
+eps
 foto
 barrio
 fecha
@@ -11,3 +11,4 @@ zona
 Reponsable
 Observacion
 
+Una vez diligenciado el formato Solicitud de Admisión, deben proceder a descargar, imprimir, firmar con tinta negra y luego escanear para cargar (seleccionar archivo).

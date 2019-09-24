@@ -11,6 +11,9 @@
 |
 */
 
+//use Illuminate\Routing\Route;
+use Illuminate\Http\Request;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -64,3 +67,5 @@ Route::post('subir/inscripcion','FormularioController@inscripcion')->name('formu
 Route::resource('documentosIncripcions', 'DocumentosIncripcionController');
 Route::get('correo','PersonasController@correo');
 Route::get('pdf','FormularioController@pdf');
+Route::get('bajar/pdf/solicitud-admision/{id}','FormularioController@pdf_admision');
+Route::get('asp','AspirantesController@ad');

@@ -31,7 +31,7 @@ class Aspirantes extends Model
     use SoftDeletes;
 
     public $table = 'aspirantes';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -85,7 +85,7 @@ class Aspirantes extends Model
      * @var array
      */
     public static $rules = [
-        
+
     ];
     public function persona()
     {
@@ -93,6 +93,18 @@ class Aspirantes extends Model
     }
     public function padres()
     {
-        //return $this->belongsTo('App\Models\Padres','padres_id','id');
+        return $this->hasMany('App\Models\Padres','aspirantes_id','id');
+    }
+    public  function hermanos()
+    {
+        return $this->hasMany('App\Models\Hermanos','aspirantes_id','id');
+    }
+    public function documentos()
+    {
+        return $this->hasMany('App\Models\Hermanos','aspirantes_id','id');
+    }
+    public function docs()
+    {
+        return $this->hasMany('App\Models\DocumentosIncripcion','aspirantes_id','id');
     }
 }
