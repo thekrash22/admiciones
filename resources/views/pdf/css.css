@@ -1,0 +1,68 @@
+.bor {
+    border: 2px solid black;
+}
+
+.bor1{
+    border: 1px solid black
+}
+
+
+.escudo {
+    width: 150px;
+}
+
+.jj {
+  
+    vertical-align: middle;
+}
+
+.centor {
+    margin: 25px 1px 1px 1px
+  
+  }
+
+.alear1 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.diva { 
+      background-color: #adb5bd2b; 
+  }
+
+.diva1 {
+    background-color: #adb5bd7a;
+  }
+
+  .body { 
+    background-color: #FF0000; 
+  } 
+
+ .testp {
+    padding-bottom: 0px;
+    padding-top: 0px;
+"
+ } 
+
+ .testp1 {
+   padding-bottom: 0px;
+   padding-top: 0px;
+
+ }
+
+ .testp3 {
+  background-color: #d8dcdf;
+  border: 2px black solid;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 2px;
+}
+
+
+
+
+
+
+
+
+
