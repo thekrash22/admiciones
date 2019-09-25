@@ -68,6 +68,20 @@ class Personas extends Model
     public static $rules = [
         
     ];
+    public function tipodoc()
+    {
+        switch ($this->tipo_documento) {
+            case 'TI' :
+                $respuesta = 'Tarjeta Identidad';
+                break;
+            case 'RC' :
+                $respuesta = 'Registro Civil'; 
+                break;
+
+               
+        }
+        return $respuesta;
+    }
 
     
 }

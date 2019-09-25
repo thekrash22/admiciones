@@ -49,6 +49,7 @@
                         El aspirante debe cumplir con todo el proceso de admisión)
 </td>
 
+
         </tr>
         <tr class="diva1">
             <td colspan="2" style="padding-bottom: 0px; padding-top: 0px; padding-left: 1px;">Fecha de Inscripción: </td>
@@ -93,7 +94,7 @@
             <td class="diva1" style="padding-bottom: 0px;padding-top: 0px;padding-left: 0px;padding-right: 0px;">Mes</td>
             <td class="diva1" style="padding-bottom: 0px;padding-top: 0px;padding-left: 0px;padding-right: 0px;">Año</td>
             <td class="diva1" rowspan="2" style="padding-bottom: 0px; padding-top: 10px;">Lugar:</td>
-            <td colspan="2" rowspan="2" style="padding-bottom: 0px; padding-top: 0px;"></td>
+            <td colspan="2" rowspan="2" style="padding-bottom: 0px; padding-top: 0px;">{{$aspirante->persona->lugar_nacimiento}}</td>
             <td class="diva1" rowspan="2" style="padding-bottom: 0px; padding-top: px;">Grupo Sanguíneo:</td>
             <td rowspan="2" style="padding-bottom: 0px; padding-top: 0px;"></td>
         </tr>
@@ -110,7 +111,7 @@
         <tr>
 
 
-            <td colspan="3" style="padding-bottom: 0px; padding-top: 0px; text-align: left;margin-bottom: 0px;font-size: small;">cedula</td>
+            <td colspan="3" style="padding-bottom: 0px; padding-top: 0px; text-align: left;margin-bottom: 0px;font-size: small;">{{$aspirante->persona->tipodoc()}}</td>
             <td colspan="3" style="padding-bottom: 0px; padding-top: 0px; text-align: left;margin-bottom: 0px;font-size: small;">1082838062</td>
             <td colspan="3" style="padding-bottom: 0px; padding-top: 0px; text-align: left;margin-bottom: 0px;font-size: small;">santa marta</td>
         </tr>

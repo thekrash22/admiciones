@@ -153,13 +153,27 @@ class AspirantesController extends AppBaseController
 
         return redirect(route('aspirantes.index'));
     }
+
+
+
+   
     public function ad()
     {
-        $aspirantes = $this->aspirantesRepository->find(13);
+        $aspirantes = $this->aspirantesRepository->find(10);
         //dd($aspirantes->persona);
         //dd($aspirantes->padres[0]->personas);
         //dd($aspirantes->padres[1]->personas->primer_nombre);
-        dd($aspirantes->religion);
+        //dd($aspirantes->religion);
+        //dd($aspirantes->persona->lugar_nacimiento);
+        dd($aspirantes->persona->lugar_nacimiento);
+        //dd($aspirantes->persona->tipo_documento);
+        //dd($aspirantes->estrato);
     }
+
+    
+
+  
+
+
 
 }
