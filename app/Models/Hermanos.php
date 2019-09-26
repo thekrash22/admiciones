@@ -60,5 +60,13 @@ class Hermanos extends Model
         
     ];
 
+    public function hna()
+    {
+        if($this->id===$this->aspirantes_id){
+            return 'SI';
+        }else{
+            return 'NO';
+        }
+    }
     
 }

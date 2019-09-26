@@ -107,4 +107,42 @@ class Aspirantes extends Model
     {
         return $this->hasMany('App\Models\DocumentosIncripcion','aspirantes_id','id');
     }
+
+    public function zoru()
+    {
+        switch ($this->zona) {
+            case 'Rural' :
+                $respuesta = 'X';
+                break;
+            case 'Urbana' :
+                $respuesta = ''; 
+                break;
+
+               
+        }
+        return $respuesta;
+    }
+    public function zour()
+    {
+        switch ($this->zona) {
+            case 'Rural' :
+                $respuesta = '';
+                break;
+            case 'Urbana' :
+                $respuesta = 'X'; 
+                break;
+
+               
+        }
+        return $respuesta;
+    }
+    public function formulario()
+    {
+        if($this->id<100){
+            return 'SI';
+        }else{
+            return 'NO';
+        }
+    }
+    
 }

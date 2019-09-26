@@ -41,8 +41,7 @@
 
         <tr>
             <td colspan="10" style="padding-bottom: 25px; padding-top: 25px;"></td>
-            <td rowspan="5" colspan="2" style="text-align:center; padding-bottom: 0px; padding-top: 0px;">Foto<br>Reciente<br>(Tamaño 3x4)
-</td>
+            <td rowspan="5" colspan="2" style="text-align:center; padding-bottom: 0px; padding-top: 0px;">{{$aspirante->Foto}} </td>
         </tr>
         <tr class="bor diva1">
             <td colspan="10" style="text-align:center; padding-bottom: 0px; padding-top: 0px;">(Esta inscripción no asegura la matrícula.<br>
@@ -86,7 +85,7 @@
         </tr>
         <tr class="bor testp1">
             <td colspan="3" class="bor diva1" style=" padding-bottom: 0px;padding-top: 0px;padding-left: 3px; text-align: left;margin-bottom: 0px;font-size: small;">Nombre Completo</td>
-            <td colspan="8" class="testp"></td>
+            <td colspan="8" class="testp" style="padding-bottom: 0px; padding-top: 0px;"> {{$aspirante->persona->primer_nombre}} {{$aspirante->persona->segundo_nombre}}</td>
         </tr>
         <tr class="bor">
             <td colspan="3" rowspan="2" class="diva1" style="padding-bottom: 0px;padding-top: 10px;padding-left: 0px;padding-right: 0px; text-align: left;margin-bottom: 0px;font-size: small;">Fecha de nacimiento</td>
@@ -94,46 +93,45 @@
             <td class="diva1" style="padding-bottom: 0px;padding-top: 0px;padding-left: 0px;padding-right: 0px;">Mes</td>
             <td class="diva1" style="padding-bottom: 0px;padding-top: 0px;padding-left: 0px;padding-right: 0px;">Año</td>
             <td class="diva1" rowspan="2" style="padding-bottom: 0px; padding-top: 10px;">Lugar:</td>
-            <td colspan="2" rowspan="2" style="padding-bottom: 0px; padding-top: 0px;">{{$aspirante->persona->lugar_nacimiento}}</td>
+            <td colspan="2" rowspan="2" style="padding-bottom: 0px; padding-top: 10px;">{{$aspirante->persona->lugar_nacimiento}}</td>
             <td class="diva1" rowspan="2" style="padding-bottom: 0px; padding-top: px;">Grupo Sanguíneo:</td>
             <td rowspan="2" style="padding-bottom: 0px; padding-top: 0px;"></td>
         </tr>
         <tr class="bor">
-            <td colspan="3" style="padding-bottom: 0px; padding-top: 20px;"></td>
+            <td colspan="3" style="padding-bottom: 0px; padding-top: 0px;">fecha aun no </td>
         </tr>
         <tr>
-            <td class="diva1" colspan="2" rowspan="2" style="padding-bottom: 0px;padding-top: 10px;padding-left: 3px; text-align: left;margin-bottom: 0px;font-size: small;">Identificación</td>
-
-            <td class="diva1" colspan="3" style="text-align: center; padding-bottom: 0px; padding-top: 0px;  padding-left: 3px; text-align: left;margin-bottom: 0px;font-size: small;">Tipo de Documento</td>
-            <td class="diva1" colspan="3" style="text-align: center; padding-bottom: 0px; padding-top: 0px; padding-left: 3px; text-align: left;margin-bottom: 0px;font-size: small;">Número de Documento</td>
-            <td class="diva1" colspan="3" style="text-align: center; padding-bottom: 0px; padding-top: 0px; text-align: left;margin-bottom: 0px;font-size: small;">Expedido en:</td>
+            <td class="diva1" colspan="2" rowspan="2" style="padding-bottom: 0px;padding-top: 10px;padding-left: 0px; text-align: left;margin-bottom: 0px;font-size: small;">Identificación</td>
+            <td class="diva1" colspan="4" style="padding-bottom: 0px; padding-top: 0px; text-align: center;margin-bottom: 0px;font-size: small;">Tipo de Documento</td>
+            <td class="diva1" colspan="2" style="padding-bottom: 0px; padding-top: 0px; text-align: center;margin-bottom: 0px;font-size: small;">Número de Documento</td>
+            <td class="diva1" colspan="3" style="padding-bottom: 0px; padding-top: 0px; text-align: center;margin-bottom: 0px;font-size: small;">Expedido en:</td>
         </tr>
         <tr>
 
 
-            <td colspan="3" style="padding-bottom: 0px; padding-top: 0px; text-align: left;margin-bottom: 0px;font-size: small;">{{$aspirante->persona->tipodoc()}}</td>
-            <td colspan="3" style="padding-bottom: 0px; padding-top: 0px; text-align: left;margin-bottom: 0px;font-size: small;">1082838062</td>
-            <td colspan="3" style="padding-bottom: 0px; padding-top: 0px; text-align: left;margin-bottom: 0px;font-size: small;">santa marta</td>
+            <td colspan="4" style="padding-bottom: 0px; padding-top: 0px; text-align: center;margin-bottom: 0px;font-size: small;">{{$aspirante->persona->tipodoc()}}</td>
+            <td colspan="2" style="padding-bottom: 0px; padding-top: 0px; text-align: center;margin-bottom: 0px;font-size: small;">{{$aspirante->persona->numero_documento}}</td>
+            <td colspan="3" style="padding-bottom: 0px; padding-top: 0px; text-align: center;margin-bottom: 0px;font-size: small;">{{$aspirante->persona->lugar_expedicion_documento}}</td>
         </tr>
         <tr>
             <td colspan="2" style="padding-bottom: 0px;padding-top: 0px;padding-left: 3px; text-align: left;margin-bottom: 0px;font-size: small;">Dirección:</td>
-            <td colspan="9" style="padding-bottom: 0px; padding-top: 0px;"></td>
+            <td colspan="9" style="padding-bottom: 0px; padding-top: 0px;"> {{$aspirante->direccion}}</td>
         </tr>
         <tr>
             <td colspan="2" style="padding-bottom: 0px;padding-top: 0px;padding-left: 3px; text-align: left;margin-bottom: 0px;font-size: small;">Barrio</td>
-            <td colspan="5" style="padding-bottom: 0px; padding-top: 0px;"></td>
+            <td colspan="5" style="padding-bottom: 0px; padding-top: 0px;"> {{$aspirante->barrio}}</td>
             <td style="padding-bottom: 0px; padding-top: 0px;">Teléfono</td>
-            <td colspan="3" style="padding-bottom: 0px; padding-top: 0px;"></td>
+            <td colspan="3" style="padding-bottom: 0px; padding-top: 0px;"> {{$aspirante->telefono}}</td>
         </tr>
         <tr>
         <td colspan="4" rowspan="2" style="padding-bottom: 0px;padding-top: 10px;padding-left: 3px;">Municipio donde Vive:   </td>
             <td colspan="4" style="text-align: center; padding-bottom: 0px; padding-top: 0px;">Zona</td>
             <td colspan="2" rowspan="2" style="padding-bottom: 0px; padding-top: 10px;">Estrato Donde Vive</td>
-            <td rowspan="2" style="padding-bottom: 0px; padding-top: 0px;"></td>
+            <td rowspan="2" style="text-align:center; padding-bottom: 0px; padding-top: 10px;"> {{$aspirante->estrato}}</td>
         </tr>
         <tr>
-            <td colspan="2" style="padding-bottom: 0px; padding-top: 0px;">Urbana:</td>
-            <td colspan="2" style="padding-bottom: 0px; padding-top: 0px;">Rural</td>
+            <td colspan="2" style="padding-bottom: 0px; padding-top: 0px;">Urbana: {{$aspirante->zoru()}}</td>
+            <td colspan="2" style="padding-bottom: 0px; padding-top: 0px;">Rural: {{$aspirante->zour()}}</td>
 
         </tr>
         <tr>
@@ -141,7 +139,7 @@
         </tr>
         <tr>
         <td colspan="4" style="padding-bottom: 0px;padding-top: 0px;padding-left: 3px;">E.P.S del Aspirante:</td>
-            <td colspan="7" style="padding-bottom: 0px; padding-top: 0px;"></td>
+            <td colspan="7" style="padding-bottom: 0px; padding-top: 0px;"> {{$aspirante->eps}}</td>
         </tr>
         <tr>
             <td colspan="7" rowspan="2" style="text-align: center; padding-bottom: 0px; padding-top: 0px;">Tiene Hermanos en el Colegio:<br>(reñaciónelos a Continuación)</td>
@@ -175,7 +173,7 @@
         </tr>
         <tr class="bor">
             <td colspan="3" class="diva1" style="padding-bottom: 0px; padding-top: 0px;">Colegio de procedencia actual</td>
-            <td colspan="8" style="padding-bottom: 0px; padding-top: 0px;"></td>
+            <td colspan="8" style="padding-bottom: 0px; padding-top: 0px;">ssfsdf   </td>
         </tr>
         <tr class="bor">
             <td colspan="3" class="diva1" style="padding-bottom: 0px; padding-top: 0px;">Ha reiniciado algún grado</td>

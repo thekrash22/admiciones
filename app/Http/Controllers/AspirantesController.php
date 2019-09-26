@@ -159,15 +159,24 @@ class AspirantesController extends AppBaseController
    
     public function ad()
     {
-        $aspirantes = $this->aspirantesRepository->find(10);
+        $aspirantes = $this->aspirantesRepository->find(1);
         //dd($aspirantes->persona);
         //dd($aspirantes->padres[0]->personas);
         //dd($aspirantes->padres[1]->personas->primer_nombre);
         //dd($aspirantes->religion);
         //dd($aspirantes->persona->lugar_nacimiento);
-        dd($aspirantes->persona->lugar_nacimiento);
+        //dd($aspirantes->persona->lugar_nacimiento);
         //dd($aspirantes->persona->tipo_documento);
         //dd($aspirantes->estrato);
+        //dd($aspirantes->persona->primer_nombre);
+        //dd($aspirantes->persona->fecha_nacimiento);
+        //dd($aspirantes->persona->numero_documento);
+        //dd($aspirantes->direccion);
+        //dd($aspirantes->formulario());
+        //dd($aspirantes->hermanos[0]->primer_nombre);
+        //dd($aspirantes->hermanos;
+        //dd($hermanos->hna());
+        dd($aspirantes->historia_academicas[0]);
     }
 
     
