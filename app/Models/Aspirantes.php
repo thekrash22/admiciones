@@ -144,5 +144,14 @@ class Aspirantes extends Model
             return 'NO';
         }
     }
+    public function telefonos()
+    {
+        $telefonos = $this->telefono;
+        foreach($this->padres as $padre){
+            $telefonos = $telefonos.' || '.$padre->celular;
+        }
+        return $telefonos;
+    }
     
 }
+ 
