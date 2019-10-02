@@ -117,10 +117,7 @@ class Aspirantes extends Model
             case 'Urbana' :
                 $respuesta = ''; 
                 break;
-
-               
         }
-        return $respuesta;
     }
     public function zour()
     {
@@ -131,18 +128,7 @@ class Aspirantes extends Model
             case 'Urbana' :
                 $respuesta = 'X'; 
                 break;
-
-               
-        }
-        return $respuesta;
-    }
-    public function formulario()
-    {
-        if($this->id<100){
-            return 'SI';
-        }else{
-            return 'NO';
         }
     }
-    
 }
+               

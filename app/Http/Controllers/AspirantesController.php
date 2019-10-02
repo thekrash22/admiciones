@@ -160,7 +160,7 @@ class AspirantesController extends AppBaseController
     public function ad()
     {
         $aspirantes = $this->aspirantesRepository->find(1);
-        //dd($aspirantes->persona);
+        dd($aspirantes->persona);
         //dd($aspirantes->padres[0]->personas);
         //dd($aspirantes->padres[1]->personas->primer_nombre);
         //dd($aspirantes->religion);
@@ -176,8 +176,11 @@ class AspirantesController extends AppBaseController
         //dd($aspirantes->hermanos[0]->primer_nombre);
         //dd($aspirantes->hermanos;
         //dd($hermanos->hna());
-        dd($aspirantes->historia_academicas[0]);
+        //dd($aspirantes->historia_academicas[0]);
+        //dd($aspirantes->padres[0]->personas->primer_nombre);
+        //dd($aspirantes->historia_academicas->colegio_procedencia);
     }
+
 
     
 
