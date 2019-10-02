@@ -130,5 +130,27 @@ class Aspirantes extends Model
                 break;
         }
     }
+<<<<<<< HEAD
 }
                
+=======
+    public function formulario()
+    {
+        if($this->id<100){
+            return 'SI';
+        }else{
+            return 'NO';
+        }
+    }
+    public function telefonos()
+    {
+        $telefonos = $this->telefono;
+        foreach($this->padres as $padre){
+            $telefonos = $telefonos.' || '.$padre->celular;
+        }
+        return $telefonos;
+    }
+    
+}
+ 
+>>>>>>> 70b078a29f95f34a819aaaee393665ea1cd42016

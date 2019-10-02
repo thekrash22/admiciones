@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateAspirantesRequest;
 use App\Repositories\AspirantesRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
+use App\Models\Aspirantes;
 use Flash;
 use Response;
 
@@ -29,7 +30,17 @@ class AspirantesController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $aspirantes = $this->aspirantesRepository->paginate(10);
+
+        //$aspirantes = Aspirantes::all()->groupBy('personas_id');
+        /*foreach($aspirantes as $aspirante){
+            foreach($aspirante as $tt){
+                dd($tt);
+            }
+            dd($aspirantes);
+        }*/
+        
+        $aspirantes = $this->aspirantesRepository->paginate(20);
+
 
         return view('aspirantes.index')
             ->with('aspirantes', $aspirantes);
@@ -79,7 +90,7 @@ class AspirantesController extends AppBaseController
 
             return redirect(route('aspirantes.index'));
         }
-
+        
         return view('aspirantes.show')->with('aspirantes', $aspirantes);
     }
 
