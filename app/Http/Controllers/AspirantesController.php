@@ -8,6 +8,7 @@ use App\Repositories\AspirantesRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use App\Models\Aspirantes;
+use App\Models\Padres;
 use Flash;
 use Response;
 
@@ -187,7 +188,12 @@ class AspirantesController extends AppBaseController
         //dd($aspirantes->hermanos[0]->primer_nombre);
         //dd($aspirantes->hermanos;
         //dd($hermanos->hna());
-        dd($aspirantes->historia_academicas[0]);
+        dd($aspirantes->padres->count() == 2);
+        if($aspirantes->padres->count() == 2){
+            $padre_vacio = new Padres();
+            $aspirantes->padres->push($padre_vacio);
+        }
+        dd($aspirantes->padres);
     }
 
     
