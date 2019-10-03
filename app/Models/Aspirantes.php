@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Eloquent as Model;
+use App\Models\Padres;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
@@ -118,6 +119,7 @@ class Aspirantes extends Model
                 $respuesta = ''; 
                 break;
         }
+        return $respuesta;
     }
     public function zour()
     {
@@ -129,7 +131,38 @@ class Aspirantes extends Model
                 $respuesta = 'X'; 
                 break;
         }
+        return $respuesta;
     }
+    public function acudientes()
+    {
+        if ($this->padres->count() == 2)
+        {
+            $papa_nuevo = Padres::find(44);
+            $this->padres->push($papa_nuevo);
+        }
+    }
+    public function nformulario()
+    {
+        if ($this->id <10){
+        return "202000".$this->id;
+        }
+        else{
+        
+            return "20200".$this->id;
+        }
+    }
+
+    public function edad()
+    {    
+        $carbon = new \Carbon\Carbon();
+        $date = $carbon->createFromDate($this->persona->fecha_nacimiento->format('d-m-Y'))->age;
+        return $date;
+    }
+    
+
+
+    
+
 }
 
    

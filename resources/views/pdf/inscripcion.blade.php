@@ -53,12 +53,12 @@
         <tr class="diva1">
             <td colspan="2" style="padding-bottom: 0px; padding-top: 0px; padding-left: 1px;">Fecha de Inscripción: </td>
             <td colspan="7" style="padding-bottom: 0px; padding-top: 0px;"></td>
-            <td rowspan="2" style="padding-bottom: 0px; padding-top: 0px; padding-left: 3px;">Formulario No.<br>{{ $aspirante->id }}</td>
+            <td rowspan="2" style="padding-bottom: 0px; padding-top: 0px; padding-left: 3px;">Formulario No.<br><center>{{ $aspirante->nformulario() }}</center></td>
 
         </tr>
         <tr class="diva1">
             <td colspan="4" style="padding-bottom: 0px; padding-top: 0px; padding-left: 1px;">Grado al que desea ingresar: </td>
-            <td colspan="5" style="padding-bottom: 0px; padding-top: 0px; padding-left: 1px;"></td>
+            <td colspan="5" style="padding-bottom: 0px; padding-top: 0px; padding-left: 1px;">{{ $aspirante->grado}}</td>
 
 
         </tr>
@@ -81,7 +81,7 @@
             <td colspan="6" style="padding-bottom: 0px; padding-top: 0px;">{{$aspirante->persona->primer_apellido}} {{$aspirante->persona->segundo_apellido}}</td>
 
             <td class="diva1" style="padding-bottom: 0px; padding-top: 0px;">Edad</td>
-            <td style="padding-bottom: 0px; padding-top: 0px;">31</td>
+            <td style="padding-bottom: 0px; padding-top: 0px;">{{ $aspirante->edad() }}</td>
         </tr>
         <tr class="bor testp1">
             <td colspan="3" class="bor diva1" style=" padding-bottom: 0px;padding-top: 0px;padding-left: 3px; text-align: left;margin-bottom: 0px;font-size: small;">Nombre Completo</td>
@@ -98,7 +98,7 @@
             <td rowspan="2" style="padding-bottom: 0px; padding-top: 0px;"></td>
         </tr>
         <tr class="bor">
-            <td colspan="3" style="padding-bottom: 0px; padding-top: 0px;">fecha aun no </td>
+            <td colspan="3" style="padding-bottom: 0px; padding-top: 0px;">{{$aspirante->persona->fecha_nacimiento->format('d-m-Y')}}</td>
         </tr>
         <tr>
             <td class="diva1" colspan="2" rowspan="2" style="padding-bottom: 0px;padding-top: 10px;padding-left: 0px; text-align: left;margin-bottom: 0px;font-size: small;">Identificación</td>
@@ -350,8 +350,9 @@
         <tr class="bor diva1">
             <td colspan="11" style="text-align:center; padding-bottom: 0px; padding-top: 0px;">INFORMACIÓN DEL ACUDIENTE:</td>
         </tr>
+        
         <tr class="bor">
-            <td colspan="6" style="padding-bottom: 0px; padding-top: 0px;">Apellidos: {{$aspirante->padres[2]->personas->primer_apellido}} {{$aspirante->padres[2]->personas->segundo_apellido}} </td>
+            {{$aspirante->acudientes()}}
             <td colspan="5" style="padding-bottom: 0px; padding-top: 0px;">Nombres: {{$aspirante->padres[2]->personas->primer_nombre}} {{$aspirante->padres[2]->personas->segundo_nombre}}</td>
         </tr>
         <tr class="bor">
