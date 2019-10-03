@@ -7,10 +7,6 @@ use App\Http\Requests\UpdateAspirantesRequest;
 use App\Repositories\AspirantesRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
-<<<<<<< HEAD
-use App\Models\Aspirantes;
-=======
->>>>>>> 7e593b583115617dd039a1f0c5318603dd35175d
 use App\Models\Padres;
 use Flash;
 use Response;
