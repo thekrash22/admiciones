@@ -137,7 +137,7 @@ class Aspirantes extends Model
     {
         if ($this->padres->count() == 2)
         {
-            $papa_nuevo = Padres::find(44);
+            $papa_nuevo = Padres::find(41);
             $this->padres->push($papa_nuevo);
         }
     }

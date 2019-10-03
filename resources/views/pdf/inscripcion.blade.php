@@ -20,7 +20,7 @@
 
         <table  class="table table-bordered border" style="text-align: left;margin-bottom: 0px;font-size: small;">
             <tr>
-                <td rowspan ="4" class="bor1" style="width:20%; padding-bottom: 0px; padding-top: 0px;"><img src="01_Escudo_Presentacion_color.png" width=150px height=150px /></td>
+                <td rowspan ="4" class="bor1" style="width:20%; padding-bottom: 0px; padding-top: 0px;"><img src="{{asset('imgs/01_Escudo_Presentacion_color.png')}}" width=150px height=150px /></td>
                 <td rowspan ="4" style="width:50%; padding-bottom: 0px; padding-top: 0px;"><p style= "text-align: center;font-size: small;">INSTITUTO LA MILAGROSA<br>PROCESO DE GESTIÓN ADMISIÓN Y MATRÍCULA </p><p style= "text-align: center;">SOLICITUD DE ADMISIÓN</p></td>
                 <td style="width:30%; padding-bottom: 0px; padding-top: 0px;"><p style="text-align: center;margin-bottom: 0px;" >AMFR01</p></td>
             <tr>
@@ -41,7 +41,7 @@
 
         <tr>
             <td colspan="10" style="padding-bottom: 25px; padding-top: 25px;"></td>
-            <td rowspan="5" colspan="2" style="text-align:center; padding-bottom: 0px; padding-top: 0px;">{{$aspirante->Foto}} </td>
+            <td rowspan="5" colspan="2" style="text-align:center; padding-bottom: 0px; padding-top: 0px;"><img src="{{asset('foto-estudiantes/'.$aspirante->Foto)}}" /></td>
         </tr>
         <tr class="bor diva1">
             <td colspan="10" style="text-align:center; padding-bottom: 0px; padding-top: 0px;">(Esta inscripción no asegura la matrícula.<br>
@@ -213,7 +213,7 @@
         <br>
         <table  class="table table-bordered border"  style="text-align: left;margin-bottom: 0px;font-size: small;" >
             <tr>
-                <td rowspan ="4" class="bor1" style="width:20%; padding-bottom: 0px; padding-top: 0px;"><img src="01_Escudo_Presentacion_color.png" width=150px height=150px /></td>
+                <td rowspan ="4" class="bor1" style="width:20%; padding-bottom: 0px; padding-top: 0px;"><img src="{{asset('imgs/01_Escudo_Presentacion_color.png')}}" width=150px height=150px /></td>
                 <td rowspan ="4" style="width:50%; padding-bottom: 0px; padding-top: 0px;"><p style= "text-align: center;font-size: small;">INSTITUTO LA MILAGROSA<br>PROCESO DE GESTIÓN ADMISIÓN Y MATRÍCULA </p><p style= "text-align: center;">SOLICITUD DE ADMISIÓN</p></td>
                 <td style="width:30%; padding-bottom: 0px; padding-top: 0px;"><p style="text-align: center;margin-bottom: 0px;" >AMFR01</p></td>
             <tr>
@@ -402,7 +402,7 @@
          <br>
          <table  class="table table-bordered border"  style="text-align: left;margin-bottom: 0px;font-size: small;">
             <tr>
-                <td rowspan ="4" class="bor1" style="width:20%; padding-bottom: 0px; padding-top: 0px;"><img src="01_Escudo_Presentacion_color.png" width=150px height=150px /></td>
+                <td rowspan ="4" class="bor1" style="width:20%; padding-bottom: 0px; padding-top: 0px;"><img src="{{asset('imgs/01_Escudo_Presentacion_color.png')}}" width=150px height=150px /></td>
                 <td rowspan ="4" style="width:50%; padding-bottom: 0px; padding-top: 0px;"><p style= "text-align: center;font-size: small;">INSTITUTO LA MILAGROSA<br>PROCESO DE GESTIÓN ADMISIÓN Y MATRÍCULA </p><p style= "text-align: center;">SOLICITUD DE ADMISIÓN</p></td>
                 <td style="width:30%; padding-bottom: 0px; padding-top: 0px;"><p style="text-align: center;margin-bottom: 0px;" >AMFR01</p></td>
             <tr>
