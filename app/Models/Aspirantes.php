@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Eloquent as Model;
+use App\Models\Padres;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
@@ -117,8 +118,6 @@ class Aspirantes extends Model
             case 'Urbana' :
                 $respuesta = ''; 
                 break;
-
-               
         }
         return $respuesta;
     }
@@ -131,27 +130,40 @@ class Aspirantes extends Model
             case 'Urbana' :
                 $respuesta = 'X'; 
                 break;
-
-               
         }
         return $respuesta;
     }
-    public function formulario()
+    public function acudientes()
     {
-        if($this->id<100){
-            return 'SI';
-        }else{
-            return 'NO';
+        if ($this->padres->count() == 2)
+        {
+            $papa_nuevo = Padres::find(44);
+            $this->padres->push($papa_nuevo);
         }
     }
-    public function telefonos()
+    public function nformulario()
     {
-        $telefonos = $this->telefono;
-        foreach($this->padres as $padre){
-            $telefonos = $telefonos.' || '.$padre->celular;
+        if ($this->id <10){
+        return "202000".$this->id;
         }
-        return $telefonos;
+        else{
+        
+            return "20200".$this->id;
+        }
+    }
+
+    public function edad()
+    {    
+        $carbon = new \Carbon\Carbon();
+        $date = $carbon->createFromDate($this->persona->fecha_nacimiento->format('d-m-Y'))->age;
+        return $date;
     }
     
+
+
+    
+
 }
+
+   
  

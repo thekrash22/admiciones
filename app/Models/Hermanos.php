@@ -62,7 +62,7 @@ class Hermanos extends Model
 
     public function hna()
     {
-        if($this->id===$this->aspirantes_id){
+        if($this->hermanos){
             return 'SI';
         }else{
             return 'NO';
