@@ -295,7 +295,7 @@
         </tr>
         <tr class="bor">
             <td colspan="6" style="padding-bottom: 0px; padding-top: 0px;">Apellidos: {{$aspirante->padres[1]->personas->primer_apellido}} {{$aspirante->padres[1]->personas->segundo_apellido}}</td>
-            <td colspan="5" style="padding-bottom: 0px; padding-top: 0px;">Nombres: Nombres: {{$aspirante->padres[1]->personas->primer_nombre}} {{$aspirante->padres[1]->personas->segundo_nombre}}</td>
+            <td colspan="5" style="padding-bottom: 0px; padding-top: 0px;">Nombres: {{$aspirante->padres[1]->personas->primer_nombre}} {{$aspirante->padres[1]->personas->segundo_nombre}}</td>
         </tr>
         <tr class="bor">
             <td class="diva1" style="padding-bottom: 0px; padding-top: 0px;">Cédula:</td>
@@ -351,41 +351,41 @@
             <td colspan="11" style="text-align:center; padding-bottom: 0px; padding-top: 0px;">INFORMACIÓN DEL ACUDIENTE:</td>
         </tr>
         <tr class="bor">
-            <td colspan="6" style="padding-bottom: 0px; padding-top: 0px;">Apellidos: </td>
-            <td colspan="5" style="padding-bottom: 0px; padding-top: 0px;">Nombres:</td>
+            <td colspan="6" style="padding-bottom: 0px; padding-top: 0px;">Apellidos: {{$aspirante->padres[2]->personas->primer_apellido}} {{$aspirante->padres[2]->personas->segundo_apellido}} </td>
+            <td colspan="5" style="padding-bottom: 0px; padding-top: 0px;">Nombres: {{$aspirante->padres[2]->personas->primer_nombre}} {{$aspirante->padres[2]->personas->segundo_nombre}}</td>
         </tr>
         <tr class="bor">
             <td class="diva1" style="padding-bottom: 0px; padding-top: 0px;">Cédula:</td>
-            <td colspan="5" style="padding-bottom: 0px; padding-top: 0px;">4.2</td>
+            <td colspan="5" style="padding-bottom: 0px; padding-top: 0px;">{{$aspirante->padres[2]->personas->cedula}}</td>
             <td colspan="2" class="diva1" style="padding-bottom: 0px; padding-top: 0px;">Expedida en:</td>
-            <td colspan="3" style="padding-bottom: 0px; padding-top: 0px;">4.9</td>
+            <td colspan="3" style="padding-bottom: 0px; padding-top: 0px;">{{$aspirante->padres[2]->personas->lugar_expedicion_documento}}</td>
         </tr>
         <tr class="bor">
             <td class="diva1" style="padding-bottom: 0px; padding-top: 0px;">Lugar de Nacimiento:</td>
-            <td colspan="5" style="padding-bottom: 0px; padding-top: 0px;">5.2</td>
+            <td colspan="5" style="padding-bottom: 0px; padding-top: 0px;">{{$aspirante->padres[2]->personas->lugar_nacimiento}}</td>
             <td colspan="2" class="diva1" style="padding-bottom: 0px; padding-top: 0px;">Fecha de nacimiento:</td>
-            <td colspan="3" style="padding-bottom: 0px; padding-top: 0px;">5.9</td>
+            <td colspan="3" style="padding-bottom: 0px; padding-top: 0px;">{{$aspirante->padres[2]->personas->fecha_nacimiento}}</td>
         </tr>
         <tr class="bor">
             <td class="diva1" style="padding-bottom: 0px; padding-top: 0px;">Dirección: </td>
-            <td colspan="6" style="padding-bottom: 0px; padding-top: 0px;">6.2</td>
+            <td colspan="6" style="padding-bottom: 0px; padding-top: 0px;">{{$aspirante->padres[2]->direccion}}</td>
             <td class="diva1" style="padding-bottom: 0px; padding-top: 0px;">Barrio:</td>
-            <td colspan="3" style="padding-bottom: 0px; padding-top: 0px;">6.9</td>
+            <td colspan="3" style="padding-bottom: 0px; padding-top: 0px;">{{$aspirante->padres[2]->barrio}}</td>
         </tr>
         <tr class="bor">
             <td class="diva1" style="padding-bottom: 0px; padding-top: 0px;">Teléfono:</td>
-            <td colspan="6" style="padding-bottom: 0px; padding-top: 0px;">7.2</td>
+            <td colspan="6" style="padding-bottom: 0px; padding-top: 0px;">{{$aspirante->padres[2]->telefono}}</td>
             <td class="diva1" style="padding-bottom: 0px; padding-top: 0px;">Celular:</td>
-            <td colspan="3" style="padding-bottom: 0px; padding-top: 0px;">7.9</td>
+            <td colspan="3" style="padding-bottom: 0px; padding-top: 0px;">{{$aspirante->padres[2]->celular}}</td>
 
         </tr>
         <tr class="bor">
             <td class="diva1" style="padding-bottom: 0px; padding-top: 0px;">Correo Electrónico:</td>
-            <td colspan="10" style="padding-bottom: 0px; padding-top: 0px;">8.2</td>
+            <td colspan="10" style="padding-bottom: 0px; padding-top: 0px;">{{$aspirante->padres[2]->correo}}</td>
         </tr>
         <tr class="bor">
             <td class="diva1" style="padding-bottom: 0px; padding-top: 0px;">Profesión / ocupación:</td>
-            <td colspan="10" style="padding-bottom: 0px; padding-top: 0px;">9.2</td>
+            <td colspan="10" style="padding-bottom: 0px; padding-top: 0px;">{{$aspirante->padres[2]->profesion}}</td>
         </tr>
         <tr class="diva1 bor">
             <td colspan="5" style="text-align:center; padding-bottom: 0px; padding-top: 0px;">Empresa donde labora: </td>
@@ -393,9 +393,9 @@
             <td colspan="2" style="text-align:center; padding-bottom: 0px; padding-top: 0px;">Teléfono: </td>
         </tr>
         <tr class="bor">
-            <td colspan="5" style="padding-bottom: 0px; padding-top: 0px;">11.1</td>
-            <td colspan="4" style="padding-bottom: 0px; padding-top: 0px;">11.6</td>
-            <td colspan="2" style="padding-bottom: 0px; padding-top: 0px;">11.7</td>
+            <td colspan="5" style="padding-bottom: 0px; padding-top: 0px;">{{$aspirante->padres[2]->nombre_empresa}}</td>
+            <td colspan="4" style="padding-bottom: 0px; padding-top: 0px;">{{$aspirante->padres[2]->direccion_empresa}}</td>
+            <td colspan="2" style="padding-bottom: 0px; padding-top: 0px;">{{$aspirante->padres[2]->telefono_empresa}}</td>
         </tr>
          </table>
          <br>
