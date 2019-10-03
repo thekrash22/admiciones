@@ -41,7 +41,7 @@
 
         <tr>
             <td colspan="10" style="padding-bottom: 25px; padding-top: 25px;"></td>
-            <td rowspan="5" colspan="2" style="text-align:center; padding-bottom: 0px; padding-top: 0px;"><img src="{{asset('foto-estudiantes/'.$aspirante->Foto)}}" /></td>
+            <td rowspan="5" colspan="2" style="text-align:center;padding-bottom: 0px;padding-top: 0px;padding-left: 0px;padding-right: 0px;"><img style="width: 150px; height: 140px;" src="{{asset('foto-estudiantes/'.$aspirante->Foto)}}" /></td>
         </tr>
         <tr class="bor diva1">
             <td colspan="10" style="text-align:center; padding-bottom: 0px; padding-top: 0px;">(Esta inscripción no asegura la matrícula.<br>
@@ -63,7 +63,7 @@
 
         </tr>
         <tr>
-            <td colspan="10" style="padding-bottom: 0px; padding-top: 25px;"></td>
+            <td colspan="10" style="padding-bottom: 0px; padding-top: 10px;"></td>
 
         </tr>
 </table>
@@ -135,7 +135,7 @@
 
         </tr>
         <tr>
-            <td colspan="11" style="padding-bottom: 0px; padding-top: 20px;"></td>
+            <td colspan="11" style="padding-bottom: 0px; padding-top: 10px;"></td>
         </tr>
         <tr>
         <td colspan="4" style="padding-bottom: 0px;padding-top: 0px;padding-left: 3px;">E.P.S del Aspirante:</td>
@@ -353,6 +353,7 @@
         
         <tr class="bor">
             {{$aspirante->acudientes()}}
+            <td colspan="6" style="padding-bottom: 0px; padding-top: 0px;">Apellidos: {{$aspirante->padres[2]->personas->primer_apellido}} {{$aspirante->padres[2]->personas->segundo_apellido}}</td>
             <td colspan="5" style="padding-bottom: 0px; padding-top: 0px;">Nombres: {{$aspirante->padres[2]->personas->primer_nombre}} {{$aspirante->padres[2]->personas->segundo_nombre}}</td>
         </tr>
         <tr class="bor">
