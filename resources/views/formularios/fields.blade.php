@@ -196,7 +196,7 @@
                     </div>
                     <div class="form-group col-sm-6">
                          <label for="establecimiento">establecimiento:</label>
-                         <select class="form-control" name="col_estrato"><option selected="selected" value="">Establecimiento</option><option value="privado">Privado</option><option value="publico">Público</option></select>
+                         <select class="form-control" name="col_estrato[]"><option selected="selected" value="">Establecimiento</option><option value="privado">Privado</option><option value="publico">Público</option></select>
                     </div>
                 </div>
                 <div class="form-group col-sm-12">
@@ -515,7 +515,7 @@
                 });
 
                 var wrapper_colegio = $('.formulario-colegio');
-                var fieldColegio = '<div class="form-group col-sm-6"><label>Grado:</label><input class="form-control" name="col_grado[]" type="text"></div><div class="form-group col-sm-6"><label>Año:</label><input class="form-control" name="col_anio[]" type="text"></div><div class="form-group col-sm-6"><label>Nombre del establecimiento:</label><input class="form-control" name="col_nombre[]" type="text"></div><div class="form-group col-sm-6"><label>Ciudad:</label><input class="form-control" name="col_ciudad[]" type="text"></div><div class="form-group col-sm-6"><label>Motivo Retiro</label><input class="form-control" name="col_motivo_retiro[]" type="text"></div><div class="form-group col-sm-6"><label for="establecimiento">establecimiento:</label><select class="form-control" name="col_estrato"><option selected="selected" value="">Establecimiento</option><option value="privado">Privado</option><option value="publico">Público</option></select></div>';
+                var fieldColegio = '<div class="form-group col-sm-6"><label>Grado:</label><input class="form-control" name="col_grado[]" type="text"></div><div class="form-group col-sm-6"><label>Año:</label><input class="form-control" name="col_anio[]" type="text"></div><div class="form-group col-sm-6"><label>Nombre del establecimiento:</label><input class="form-control" name="col_nombre[]" type="text"></div><div class="form-group col-sm-6"><label>Ciudad:</label><input class="form-control" name="col_ciudad[]" type="text"></div><div class="form-group col-sm-6"><label>Motivo Retiro</label><input class="form-control" name="col_motivo_retiro[]" type="text"></div><div class="form-group col-sm-6"><label for="establecimiento">establecimiento:</label><select class="form-control" name="col_estrato[]"><option selected="selected" value="">Establecimiento</option><option value="privado">Privado</option><option value="publico">Público</option></select></div>';
                 $('#agregar-colegio').click(function(){
                     $(wrapper_colegio).append(fieldColegio);
                 });
