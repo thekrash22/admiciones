@@ -156,7 +156,7 @@ class AspirantesController extends AppBaseController
     }
    public function ad()
     {
-        $aspirantes = $this->aspirantesRepository->find(3);
+        $aspirantes = $this->aspirantesRepository->find(7);
         //dd($aspirantes->persona);
         //dd($aspirantes->padres[0]->personas);
         //dd($aspirantes->padres[1]->personas->primer_nombre);
@@ -202,14 +202,15 @@ class AspirantesController extends AppBaseController
         //dd($aspirantes->acudientes());
         //dd($aspirantes->zour());
         //dd($aspirantes->zoru());
-        switch ($aspirantes->zona) {
+        /*switch ($aspirantes->zona) {
             case 'Rural' :
                 $respuesta = 'X';
                 break;
             case 'Urbana' :
                 $respuesta = ''; 
                 break;
-        }
+        }*/
+        dd($aspirantes->historiaAcademica[0]->relacionColegios);
 
     }
 }

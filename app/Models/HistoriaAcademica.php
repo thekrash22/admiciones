@@ -50,6 +50,14 @@ class HistoriaAcademica extends Model
     public static $rules = [
         
     ];
+    public function aspirantes()
+    {
+        return $this->belongsTo('App\Models\Aspirantes','aspirantes_id','id');
+    }
+    public function relacionColegios()
+    {
+        return $this->hasMany('App\Models\RelacionColegio','historia_academicas_id','id');
+    }
 
     
 }

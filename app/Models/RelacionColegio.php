@@ -62,6 +62,10 @@ class RelacionColegio extends Model
     public static $rules = [
         
     ];
+    public function historiaAcademica()
+    {
+        return $this->belongsTo('App\Models\HistoriaAcademica','historia_academicas_id','id');
+    }
 
     
 }

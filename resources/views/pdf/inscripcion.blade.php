@@ -148,20 +148,33 @@
             <td colspan="2" style="text-align: center; padding-bottom: 0px; padding-top: 0px;">No:</td>
         </tr>
         <tr>
-            <td colspan="2" style="padding-bottom: 0px; padding-top: 20px;"></td>
-            <td colspan="2" style="padding-bottom: 0px; padding-top: 20px;"></td>
+            <td colspan="2" style="padding-bottom: 0px; padding-top: 20px;">@if($aspirante->hermanos->count()>0)
+                {{'X'}}
+            @endif</td>
+            <td colspan="2" style="padding-bottom: 0px; padding-top: 20px;">@if($aspirante->hermanos->count()==0)
+                {{'X'}}
+            @endif</td>
         </tr>
         <tr>
             <td colspan="9" style="text-align: center; padding-bottom: 0px; padding-top: 0px;">Nombres y Apellidos</td>
             <td colspan="2" style="text-align: center; padding-bottom: 0px; padding-top: 0px;">Grado</td>
 
         </tr>
-        <tr>
+        @if($aspirante->hermanos->count()==0)
+            <tr>
+                <td colspan="11" style="padding-bottom: 0px; padding-top: 20px;"></td>
+            </tr>
+            <tr>
             <td colspan="11" style="padding-bottom: 0px; padding-top: 20px;"></td>
-        </tr>
-        <tr>
-        <td colspan="11" style="padding-bottom: 0px; padding-top: 20px;"></td>
-        </tr>
+            </tr>
+        @else
+            @foreach($aspirante->hermanos as $hermano)
+            <tr>
+                <td colspan="11" style="padding-bottom: 0px; padding-top: 20px;">{{$hermano->primer_nombre}} {{$hermano->segundo_nombre}} {{$hermano->primer_apellido}} {{$hermano->segundo_apellido}} </td>
+                <td colspan="11" style="padding-bottom: 0px; padding-top: 20px;">{{$hermano->grado}}</td>
+            </tr>
+            @endforeach
+        @endif
 
         </table>
 
@@ -177,11 +190,11 @@
         </tr>
         <tr class="bor">
             <td colspan="3" class="diva1" style="padding-bottom: 0px; padding-top: 0px;">Ha reiniciado algún grado</td>
-            <td style="padding-bottom: 0px; padding-top: 0px;">Si</td>
-            <td style="padding-bottom: 0px; padding-top: 0px;">No</td>
-            <td colspan="6" style="padding-bottom: 0px; padding-top: 0px;">Cual</td>
+            <td style="padding-bottom: 0px; padding-top: 0px;">Si @if($aspirante->historiaAcademica[0]->grados_repetidos != NULL) {{'X'}}</td>
+            <td style="padding-bottom: 0px; padding-top: 0px;">No@else {{'X'}}</td>@endif
+            <td colspan="6" style="padding-bottom: 0px; padding-top: 0px;">Cual {{$aspirante->historiaAcademica[0]->grados_repetidos}}</td>
         </tr>
-        <tr class="bor">
+        <tr class="bor">    
             <td colspan="11" class="diva1" style="text-align: center; padding-bottom: 0px; padding-top: 0px;">RELACIONE A CONTINUACIÓN LOS COLEGIOS DONDE HA ESTUDIADO:</td>
         </tr>
         <tr class="bor diva1">
@@ -194,6 +207,7 @@
             <td style="padding-bottom: 0px; padding-top: 0px;">Privado</td>
             <td style="padding-bottom: 0px; padding-top: 0px;">Público</td>
         </tr>
+        @if($aspirante->historiaAcademica[0]->relacionColegios->count() == 0)
         <tr class="bor">
             <td style="padding-bottom: 0px; padding-top: 25px;"></td>
             <td style="padding-bottom: 0px; padding-top: 0px;"></td>
@@ -208,6 +222,17 @@
             <td style="padding-bottom: 0px; padding-top: 0px;"></td>
             <td style="padding-bottom: 0px; padding-top: 0px;"></td>
         </tr>
+        @else
+            @foreach ($aspirante->historiaAcademica[0]->relacionColegios as $colegio)
+            <tr class="bor">
+                <td style="padding-bottom: 0px; padding-top: 25px;">{{$colegio->grado}}</td>
+                <td style="padding-bottom: 0px; padding-top: 0px;">{{$colegio->ano}}</td>
+                <td colspan="7" style="padding-bottom: 0px; padding-top: 0px;">{{$colegio->nombre_colegios}}</td>
+                <td style="padding-bottom: 0px; padding-top: 0px;">@if($colegio->tipo_intitucion == 'privado'){{'X'}}@endif</td>
+                <td style="padding-bottom: 0px; padding-top: 0px;">@if($colegio->tipo_intitucion == 'publico'){{'X'}}@endif</td>
+            </tr>
+            @endforeach
+        @endif
 
         </table>
         <br>

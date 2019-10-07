@@ -108,6 +108,10 @@ class Aspirantes extends Model
     {
         return $this->hasMany('App\Models\DocumentosIncripcion','aspirantes_id','id');
     }
+    public function historiaAcademica()
+    {
+        return $this->hasMany('App\Models\HistoriaAcademica','aspirantes_id','id');
+    }
 
     public function zoru()
     {
