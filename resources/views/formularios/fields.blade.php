@@ -5,7 +5,8 @@
     <!-- Primer Nombre Field -->
     <div class="form-group col-sm-6">
         {!! Form::label('grado_ingresar', 'Grado al que desea ingresar:') !!}
-        {!! Form::text('grado_ingresar', null, ['class' => 'form-control', 'required']) !!}
+        {!! Form::select('grado_ingresar', ['PRIMERO' => 'Grado Primero', 'SEGUNDO' => 'Grado Segundo', 'TERCERO' => 'Grado Tercero', 'CUARTO' => 'Grado Cuarto', 'QUINTO' => 'Grado Quinto', 'SEXTO' => 'Grado Sexto', 'SEPTIMO' => 'Grado Séptimo', 'OCTAVO' => 'Grado Octavo', 'NOVENO' => 'Grado Noveno'], null, ['placeholder' => 'Seleccione el grado al que desea ingresar', 'class' => 'form-control', 'required']) !!}
+     <!--   {!! Form::text('grado_ingresar', null, ['class' => 'form-control', 'required']) !!} -->
     </div>
 
     <div class="form-group col-sm-6">
@@ -171,12 +172,24 @@
             </div>
             <div class="">
                 <div class="col-sm-12">
-                    <h4>Relacione a continuación los colegios donde ha estudiado</h4>
+                    <h4>Relacione a continuación los dos ultimos colegios donde ha estudiado</h4>
                 </div>
                 <div class="formulario-colegio">
                     <div class="form-group col-sm-6">
                         <label>Grado:</label>
-                        <input class="form-control" name="col_grado[]" type="text">
+                        <select class="form-control" name="col_grado[]">
+                            <option selected="selected" value="">colegios donde ha estudiado</option>
+                            <option value="PRIMERO">Grado Primero</option>
+                            <option value="SEGUNDO">Grado Segundo</option>
+                            <option value="TERCERO">Grado Tercero</option>
+                            <option value="CUARTO">Grado Cuarto</option>
+                            <option value="QUINTO">Grado Quinto</option>
+                            <option value="SEXTO">Grado Sexto</option>
+                            <option value="SEPTIMO">Grado Séptimo</option>
+                            <option value="OCTAVO">Grado Octavo</option>
+                            <option value="NOVENO">Grado Noveno</option>
+                        </select>
+                    
                     </div>
                     <div class="form-group col-sm-6">
                         <label>Año:</label>
